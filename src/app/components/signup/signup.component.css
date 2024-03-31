@@ -1,0 +1,64 @@
+/* Style de base pour le formulaire */
+form {
+  max-width: 500px;
+  margin: auto;
+  padding: 20px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Style pour tous les champs de saisie */
+input {
+  display: block;
+  width: 100%;
+  margin: 10px 0;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  transition: border-color 0.3s;
+}
+
+input:focus {
+  border-color: #007bff;
+  outline: none; /* Supprime l'outline par défaut pour une meilleure apparence */
+}
+
+/* Style pour les boutons */
+button {
+  padding: 10px 15px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  display: block; /* Assure que le bouton s'aligne correctement et occupe toute la largeur */
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  form {
+    padding: 15px;
+  }
+}
+
+/* Style pour gérer les entrées dynamiques d'enfants */
+div[formArrayName="enfants"] {
+  margin-top: 20px;
+}
+
+div[formGroupName] {
+  background: #f9f9f9;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+label[for="enfants"] {
+  display: block;
+  margin-bottom: 10px;
+}

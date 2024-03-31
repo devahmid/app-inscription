@@ -1,0 +1,20 @@
+<div *ngIf="tuteur">
+  <h2>Bienvenue, {{ tuteur.nom }} {{ tuteur.prenom }}</h2>
+  <h3>Enfants:</h3>
+  <table>
+    <thead>
+      <tr>
+        <th>Nom</th>
+        <th>Prénom</th>
+        <th>Date de Naissance</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let enfant of tuteur.enfants">
+        <td>{{ enfant.nom }}</td>
+        <td>{{ enfant.prenom }}</td>
+        <td>{{ enfant.dateNaissance | date: 'dd/MM/yyyy' }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

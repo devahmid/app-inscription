@@ -1,0 +1,75 @@
+/* Style de base pour le formulaire */
+form {
+    max-width: 500px;
+    margin: auto;
+    padding: 20px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Style pour les groupes de formulaire */
+  .form-group {
+    margin-bottom: 20px; /* Espacement entre les groupes de formulaire */
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Style pour les labels */
+  .form-group > label {
+    margin-bottom: 5px; /* Espacement entre le label et l'input */
+  }
+  
+  /* Style pour tous les champs de saisie */
+  .form-group > input {
+    width: 100%; /* Assure que les inputs prennent toute la largeur disponible */
+    padding: 10px; /* Espacement intérieur confortable */
+    border: 1px solid #ccc; /* Bordure discrète */
+    border-radius: 5px; /* Bordures arrondies */
+    box-sizing: border-box; /* La largeur inclut padding et bordure */
+  }
+  
+  .form-group > input:focus {
+    border-color: #007bff; /* Couleur de bordure au focus */
+    outline: none; /* Supprime l'outline par défaut */
+  }
+  
+  /* Style pour le bouton de soumission */
+  button.btn.btn-primary {
+    padding: 10px 15px; /* Espacement intérieur */
+    margin-top: 10px; /* Espacement au-dessus du bouton */
+    border: none; /* Supprime la bordure */
+    border-radius: 5px; /* Bordures arrondies */
+    background-color: #007bff; /* Couleur de fond */
+    color: white; /* Couleur du texte */
+    cursor: pointer; /* Affiche un curseur pointeur */
+    width: 100%; /* Assure que le bouton s'aligne correctement et occupe toute la largeur */
+  }
+  
+  button.btn.btn-primary:hover {
+    background-color: #0056b3; /* Assombrit le bouton au survol */
+  }
+  /* Style pour les boutons */
+button.btn.btn-primary {
+    padding: 10px 15px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    width: auto; /* Permet au bouton de s'ajuster à son contenu */
+    display: block; /* Assure que le bouton s'aligne correctement */
+  }
+  
+  @media (max-width: 768px) {
+    form {
+      padding: 15px;
+      width: auto; /* Permet au formulaire de s'ajuster à la largeur de l'écran */
+    }
+  
+    .form-group > input, button.btn.btn-primary {
+      width: 100%; /* Assure que les inputs et le bouton occupent toute la largeur disponible */
+    }
+  }
+  

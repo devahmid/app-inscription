@@ -1,0 +1,45 @@
+/* Style pour le conteneur d'informations */
+div {
+    max-width: 600px; /* Ajusté pour mieux accommoder le tableau */
+    margin: auto;
+    padding: 20px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9; /* Fond légèrement gris pour distinguer la section */
+    border-radius: 5px; /* Bordures arrondies pour une apparence douce */
+}
+
+h2, h3 {
+    color: #007bff; /* Couleur pour les titres, assortie au style du formulaire */
+    margin: 10px 0; /* Espacement autour des titres */
+}
+
+/* Style pour le tableau */
+table {
+    width: 100%; /* Utilise toute la largeur disponible */
+    border-collapse: collapse; /* Supprime l'espacement entre les cellules */
+    margin-top: 10px; /* Espacement au-dessus du tableau */
+}
+
+th, td {
+    text-align: left; /* Alignement du texte à gauche */
+    padding: 8px; /* Espacement intérieur pour les cellules */
+    border: 1px solid #ddd; /* Bordure légère pour chaque cellule */
+}
+
+th {
+    background-color: #007bff; /* Fond bleu pour les en-têtes, assorti aux titres */
+    color: white; /* Texte blanc pour les en-têtes */
+    border-radius: 3px; /* Bordures légèrement arrondies pour les en-têtes */
+}
+
+tr:nth-child(even){background-color: #f2f2f2;} /* Zébrage pour les lignes */
+
+tr:hover {background-color: #ddd;} /* Couleur au survol pour les lignes */
+
+/* Responsive Design pour les petits écrans */
+@media (max-width: 768px) {
+    div {
+        padding: 15px;
+        width: auto; /* Permet au conteneur de s'ajuster à la largeur de l'écran */
+    }
+}

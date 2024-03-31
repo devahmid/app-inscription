@@ -1,0 +1,16 @@
+<form [formGroup]="signupForm" (ngSubmit)="signup()">
+    <input formControlName="nom" placeholder="Nom">
+    <input formControlName="prenom" placeholder="Prénom">
+    <input formControlName="email" type="email" placeholder="Email">
+    <input formControlName="password" type="password" placeholder="Mot de passe">
+    <input formControlName="telephone" placeholder="Téléphone">
+    <button type="submit" (click)="addInitialMessage()">S'inscrire</button>
+    <!-- <div class="card">
+      <p-toast></p-toast>
+      <button type="submit" pButton pRipple (click)="show()" label="Show" class="p-button-success"></button>
+  </div> -->
+  <!-- <div class="card">
+    <p-messages [(value)]="messages" [enableService]="false" [closable]="false" ></p-messages>
+</div> -->
+</form>
+

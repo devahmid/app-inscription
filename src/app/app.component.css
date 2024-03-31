@@ -1,0 +1,69 @@
+nav {
+    background-color: #007bff; /* Couleur de fond initiale pour la barre */
+    padding: 10px 20px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    font-family: 'Arial', sans-serif;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-right: 20px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav a:hover, nav a.active {
+    background-color: #0056b3; /* Fond bleu foncé pour les liens au survol ou actifs */
+    color: #fff;
+}
+
+.menu-toggle {
+    display: none; /* Cache le menu hamburger par défaut */
+}
+
+.menu-toggle .bar {
+    background-color: white;
+    width: 25px;
+    height: 3px;
+    margin: 5px 0;
+}
+
+.hidden {
+    display: none;
+  }
+  
+
+/* Styles pour les écrans de petite taille */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block; /* Affiche le menu hamburger */
+    }
+
+    .nav-links {
+        display: none; /* Cache les liens par défaut */
+        flex-direction: column;align-items: center;
+        width: 100%;
+    }
+
+    nav.active .nav-links {
+        display: flex;
+        justify-content: center; /* Affiche les liens lorsque le menu est actif */
+    }
+
+    nav.active .nav-links a {
+        color: white; /* Assurez-vous que la couleur du texte reste blanche */
+        text-align: center;
+        padding: 10px;
+        margin: 0;
+        border-top: 1px solid white;
+        width: 50%;
+    }
+
+    .nav-links a:first-child {
+        border-top: none;
+    }
+}
