@@ -1,3 +1,7 @@
+ <button class="ajouter-enfant-btn" (click)="afficherFormulaireAjout()">Ajouter un enfant</button>
+<app-ajout-enfant *ngIf="afficherFormulaire" [isEditing]="isEditing" [enfantToEdit]="enfantToEdit" (annulation)="fermerFormulaire()" (miseAJourRequise)="getTuteurDetails()"></app-ajout-enfant>
+
+<!--
 <div *ngIf="tuteur">
   <h2>Bienvenue, {{ tuteur.nom }} {{ tuteur.prenom }}</h2>
   <h3>Enfants:</h3>
@@ -17,4 +21,31 @@
       </tr>
     </tbody>
   </table>
+</div> -->
+<div *ngIf="tuteur">
+  <h2>Bienvenue, {{ tuteur.nom }} {{ tuteur.prenom }}</h2>
+  <h3>Enfants:</h3>
+  <table>
+    <thead>
+      <tr>
+        <th>Nom</th>
+        <th>Prénom</th>
+        <th>Date de Naissance</th>
+        <th>Actions</th> <!-- Colonne ajoutée pour les icônes -->
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let enfant of tuteur.enfants">
+        <td>{{ enfant.nom }}</td>
+        <td>{{ enfant.prenom }}</td>
+        <td>{{ enfant.dateNaissance | date: 'dd/MM/yyyy' }}</td>
+        <td>
+          <!-- Icônes de modification et de suppression -->
+          <i class="fas fa-edit" (click)="updateEnfant(enfant)"></i>
+          <i class="fas fa-trash" (click)="deleteEnfant(enfant._id)"></i>
+        </td>
+      </tr>
+    </tbody>
+  </table>
 </div>
+

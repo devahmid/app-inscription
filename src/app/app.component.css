@@ -35,7 +35,9 @@ nav a:hover, nav a.active {
 .hidden {
     display: none;
   }
-  
+  .card {
+    margin-bottom: 20%;
+  }
 
 /* Styles pour les écrans de petite taille */
 @media (max-width: 768px) {

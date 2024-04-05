@@ -1,0 +1,71 @@
+/* Style général du formulaire */
+.ajout-enfant-form {
+    max-width: 500px;
+    margin: auto;
+    padding: 20px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+.ajout-enfant-form .form-group {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Ajoutez les autres styles spécifiques ici */
+
+
+.ajout-enfant-form {
+    background-color: #fff; /* Fond blanc pour ressortir sur le fond gris du dashboard */
+    padding: 20px;
+    border-radius: 5px; /* Harmonisation avec le style du dashboard */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Légère ombre pour du relief */
+    margin-top: 20px; /* Espacement depuis le contenu précédent */
+    margin-bottom: 20px; /* Espacement depuis le contenu précédent */
+  }
+  
+  /* Style pour les champs du formulaire */
+  .ajout-enfant-form input {
+    width: 100%; /* Utilise toute la largeur disponible */
+    padding: 10px; /* Bon espacement intérieur pour faciliter la saisie */
+    margin: 8px 0; /* Espacement autour des champs */
+    box-sizing: border-box; /* S'assure que padding et border sont inclus dans la largeur */
+    border: 1px solid #ccc; /* Bordure discrète */
+    border-radius: 4px; /* Bordures légèrement arrondies */
+  }
+  
+  /* Style pour le bouton d'ajout */
+  .ajout-enfant-form button {
+    width: 100%;
+    background-color: #007bff; /* Couleur assortie au tableau et titres */
+    color: white;
+    padding: 10px;
+    margin: 10px 0; /* Espacement au-dessus et en dessous du bouton */
+    border: none;
+    border-radius: 4px; /* Bordures arrondies */
+    cursor: pointer; /* Indique que le bouton est cliquable */
+  }
+  .ajout-enfant-form .btn-secondary {
+    background-color: #fb0e36;
+  }
+  
+  .ajout-enfant-form button:hover {
+    background-color: #0056b3; /* Un peu plus foncé au survol */
+  }
+  .ajout-enfant-form .btn-secondary:hover {
+    background-color: #c72641;
+  }
+  
+  /* Améliorations responsives pour petits écrans */
+  @media (max-width: 768px) {
+    .ajout-enfant-form {
+      padding: 15px;
+    }
+    .ajout-enfant-form input,
+    .ajout-enfant-form button {
+      width: auto; /* Permet aux éléments de s'adapter à la largeur du conteneur */
+    }
+  }
+  

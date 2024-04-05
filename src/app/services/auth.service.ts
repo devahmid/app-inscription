@@ -10,6 +10,7 @@ import { isPlatformBrowser } from '@angular/common';
 })
 export class AuthService {
   private apiUrl = 'https://service-api.fr/api/tuteurs'; // Mettez à jour avec votre URL d'API
+  // private apiUrl = 'http://service-api.fr:3000/api/tuteurs'; // Mettez à jour avec votre URL d'API
   // private apiUrl = 'http://localhost:3000/api/tuteurs'; // Mettez à jour avec votre URL d'API
   private loggedIn = new BehaviorSubject<boolean>(false);
 
@@ -31,6 +32,8 @@ export class AuthService {
       .pipe(
         tap(response =>{
           this.saveToken(response.token)
+          this.saveUserId(response.tuteur._id
+            )
           this.loggedIn.next(true);
         }),
         catchError(error => {
@@ -49,6 +52,9 @@ export class AuthService {
   private saveToken(token: string): void {
     localStorage.setItem('authToken', token);
   }
+  private saveUserId(token: string): void {
+    localStorage.setItem('userId', token);
+  }
 
   // getToken(): string | null {
   //   return localStorage.getItem('authToken');
@@ -56,12 +62,13 @@ export class AuthService {
   getToken() {
     if (isPlatformBrowser(this.platformId)) {
       // Accès à localStorage seulement si exécuté côté client
-      return localStorage.getItem('monToken');
+      return localStorage.getItem('authToken');
     }
     return null;
   }
   isLoggedIn(): boolean {
     const token = this.getToken();
+    console.log(token)
     // Ici, vous pouvez ajouter une logique supplémentaire pour vérifier la validité du token
     return !!token;
   }

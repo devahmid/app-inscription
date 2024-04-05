@@ -1,0 +1,27 @@
+<!-- <form [formGroup]="enfantForm" (ngSubmit)="ajouterEnfant()">
+    <input formControlName="nom" placeholder="Nom" type="text">
+    <input formControlName="prenom" placeholder="Prénom" type="text">
+    <input formControlName="dateNaissance" placeholder="Date de Naissance" type="date">
+    <button type="submit">Ajouter Enfant</button>
+  </form>
+   -->
+
+
+   <form [formGroup]="enfantForm" (ngSubmit)="onSubmit()" class="ajout-enfant-form">
+    <div class="form-group">
+        <input formControlName="nom" placeholder="Nom" type="text">
+    </div>
+    <div class="form-group">
+        <input formControlName="prenom" placeholder="Prénom" type="text">
+    </div>
+    <div class="form-group">
+        <input formControlName="dateNaissance" placeholder="Date de Naissance" type="date">
+    </div>
+    <!-- <button type="submit" class="btn btn-primary">Ajouter Enfant</button> -->
+    <button type="submit" class="btn btn-primary">
+        {{ isEditing ? 'Modifier Enfant' : 'Ajouter Enfant' }}
+    </button>
+    <button type="button" (click)="annuler()" class="btn btn-secondary">
+        Annuler
+    </button>
+</form>

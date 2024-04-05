@@ -1,3 +1,90 @@
+/* Style général pour les boutons */
+.ajouter-enfant-btn {
+    display: block; /* Assure que le bouton est centré en lui-même */
+    margin: 20px auto; /* Centrage du bouton dans le conteneur avec une marge */
+    padding: 10px 15px; /* Espacement intérieur confortable */
+    border: none; /* Supprime la bordure par défaut */
+    border-radius: 5px; /* Bordures arrondies pour une apparence plus douce */
+    background-color: #007bff; /* Couleur de fond bleue */
+    color: white; /* Texte blanc pour une meilleure lisibilité */
+    cursor: pointer; /* Change le curseur au survol pour indiquer la possibilité de cliquer */
+    font-size: 16px; /* Taille de police pour une meilleure lisibilité */
+}
+
+.ajouter-enfant-btn:hover {
+    background-color: #0056b3; /* Assombrit légèrement le bouton au survol pour un effet interactif */
+}
+
+button {
+    background-color: #007bff; /* Couleur de fond bleue */
+    color: white; /* Texte blanc */
+    padding: 10px 15px; /* Espacement intérieur */
+    border: none; /* Pas de bordure */
+    border-radius: 5px; /* Bordures arrondies */
+    cursor: pointer; /* Curseur en forme de pointeur */
+    transition: background-color 0.3s ease; /* Transition douce pour l'effet de survol */
+}
+
+button:hover {
+    background-color: #0056b3; /* Couleur de fond plus foncée au survol */
+}
+
+/* Style spécifique pour le bouton d'ajout */
+button.ajouter-enfant-btn {
+    margin-top: 20px; /* Espacement au-dessus du bouton */
+    font-weight: bold; /* Texte en gras */
+    display: block; /* Affiche le bouton comme un bloc, centré si le parent est configuré correctement */
+    width: 100%; /* Le bouton utilise toute la largeur disponible */
+}
+/* Style spécifique pour le bouton d'ajout */
+button.ajouter-enfant-btn {
+    margin: 20px auto; /* Centrage vertical et horizontal */
+    font-weight: bold; /* Texte en gras */
+    display: inline-block; /* Permet au bouton de ne prendre que l'espace nécessaire */
+    width: auto; /* Supprime la largeur de 100%, le bouton prend la largeur de son contenu */
+    /* Ou spécifiez une largeur maximale avec max-width si vous voulez limiter sa largeur tout en le gardant centré */
+    max-width: 200px; /* Exemple de largeur maximale */
+}
+.action-btn {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    padding: 5px;
+    margin-right: 5px;
+    color: #007bff; /* Bleu, ajustez selon votre palette de couleurs */
+  }
+  
+  .action-btn:hover {
+    color: #0056b3; /* Bleu plus foncé au survol */
+  }
+  /* Style pour les icônes dans le tableau */
+table .fas {
+    cursor: pointer; /* Indique que les icônes sont cliquables */
+    margin: 0 7px; /* Espacement autour des icônes */
+}
+
+.fa-edit {
+    color: #e6ad04; /* Couleur au survol pour l'icône d'édition */
+}
+
+.fa-trash {
+    color: #df091e; /* Couleur au survol pour l'icône de suppression */
+}
+.fa-edit:hover {
+    color: #ffc107; /* Couleur au survol pour l'icône d'édition */
+}
+
+.fa-trash:hover {
+    color: #dc3545; /* Couleur au survol pour l'icône de suppression */
+}
+
+
+@media (max-width: 768px) {
+    button.ajouter-enfant-btn {
+        padding: 8px 10px; /* Ajustement de l'espacement intérieur pour les petits écrans */
+    }
+}
+
 /* Style pour le conteneur d'informations */
 div {
     max-width: 600px; /* Ajusté pour mieux accommoder le tableau */
