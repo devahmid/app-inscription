@@ -30,7 +30,6 @@ export class LoginComponent {
       this.authService.login(email, password).subscribe({
         next: (response) => {
           console.log('Connexion réussie', response);
-          // Gérer la navigation post-connexion ici
           this.router.navigate(['/dashboard']);
         },
         error: (error) => {
@@ -40,4 +39,5 @@ export class LoginComponent {
       });
     }
   }
+
 }

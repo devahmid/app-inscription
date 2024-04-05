@@ -1,6 +1,6 @@
 import { Inject, Injectable, PLATFORM_ID } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { BehaviorSubject, Observable, of } from 'rxjs';
+import { BehaviorSubject, Observable, of, throwError } from 'rxjs';
 import { tap, catchError } from 'rxjs/operators';
 import { Tuteur } from '../models/tuteur';
 import { isPlatformBrowser } from '@angular/common';
@@ -30,19 +30,18 @@ export class AuthService {
   login(email: string, password: string): Observable<any> {
     return this.http.post<any>(`${this.apiUrl}/login`, { email, password })
       .pipe(
-        tap(response =>{
-          this.saveToken(response.token)
-          this.saveUserId(response.tuteur._id
-            )
+        tap(response => {
+          this.saveToken(response.token);
+          this.saveUserId(response.tuteur._id);
           this.loggedIn.next(true);
         }),
         catchError(error => {
           console.error('Erreur de connexion', error);
-          return of(null);
+          // Relancez l'erreur pour qu'elle soit traitée dans le gestionnaire `error` de la souscription
+          return throwError(() => error);
         })
       );
   }
-
   logout(): void {
     localStorage.removeItem('authToken');
     this.loggedIn.next(false);

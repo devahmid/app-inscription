@@ -215,17 +215,17 @@
 // })
 
 // export class AppModule {}
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; // Import here
+// import { BrowserModule } from '@angular/platform-browser';
+// import { NgModule } from '@angular/core';
+// import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; // Import here
 
-import { AppComponent } from './app.component';
+// import { AppComponent } from './app.component';
 
-@NgModule({
-  declarations: [AppComponent],
-  imports: [BrowserModule, BrowserAnimationsModule], // Add here
-  providers: [],
-  bootstrap: [AppComponent]
-})
-export class AppModule { }
+// @NgModule({
+//   declarations: [AppComponent],
+//   imports: [BrowserModule, BrowserAnimationsModule], // Add here
+//   providers: [],
+//   bootstrap: [AppComponent]
+// })
+// export class AppModule { }
 
